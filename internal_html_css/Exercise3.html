@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Interview Page</title>
+  <style>
+    * {
+      margin: 0; padding: 0; box-sizing: border-box;
+    }
+    body {
+      font-family: 'Arial', sans-serif;
+      background: #f5f5f5;
+      color: #333;
+    }
+
+    .top_head {
+      border-bottom: 3px solid #444;
+      background: #fff;
+    }
+    .top_head h1 {
+      text-align: center;
+      font-size: 36px;
+      line-height: 60px;
+      margin: 0;
+      color: #222;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+
+    .main_page {
+      display: flex;
+      height: calc(100vh - 60px);
+    }
+
+    /* Left sidebar */
+    .left_list {
+      flex: 0 0 18%;
+      background: #e3f2fd;
+      border-right: 2px solid #90caf9;
+      padding: 20px;
+      overflow-y: auto;
+    }
+    .left_list h5 {
+      font-size: 20px;
+      text-align: center;
+      margin-bottom: 10px;
+      color: #0d47a1;
+      text-decoration: underline;
+    }
+    .left_list ol {
+      list-style-type: disc;
+      padding-left: 20px;
+      line-height: 1.8;
+    }
+    .left_list ol li {
+      font-size: 16px;
+      color: #0d47a1;
+      margin-bottom: 6px;
+    }
+
+    .right_section {
+      flex: 1;
+      background: #fff;
+      padding: 30px;
+      border-left: 2px solid #90caf9;
+      overflow-y: auto;
+    }
+
+    .top_table table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 30px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .top_table th,
+    .top_table td {
+      border: 1px solid #bbb;
+      padding: 10px;
+      text-align: center;
+    }
+    .top_table th {
+      background: #90caf9;
+      color: #fff;
+      font-weight: 600;
+    }
+    .top_table tr:nth-child(even) {
+      background: #f1faff;
+    }
+
+    .questions h2 {
+      text-align: center;
+      margin-bottom: 15px;
+      color: #0d47a1;
+      text-decoration: underline;
+    }
+    .questions ol {
+      list-style-type: decimal;
+      padding-left: 20px;
+      line-height: 1.8;
+    }
+    .questions li {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="top_head">
+    <h1>Interview Questions</h1>
+  </div>
+
+  <div class="main_page">
+
+    <!-- Left Sidebar -->
+    <div class="left_list">
+      <h5>Important Links</h5>
+      <ol>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+        <li>Python</li>
+        <li>Java</li>
+        <li>C/C++</li>
+      </ol>
+    </div>
+
+    <!-- Right Section -->
+    <div class="right_section">
+
+      <!-- Probability Table -->
+      <div class="top_table">
+        <table>
+          <thead>
+            <tr>
+              <th>Topic</th>
+              <th>Likelihood</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>HTML</td><td>25%</td></tr>
+            <tr><td>CSS</td><td>20%</td></tr>
+            <tr><td>JavaScript</td><td>15%</td></tr>
+            <tr><td>Python</td><td>15%</td></tr>
+            <tr><td>Java</td><td>15%</td></tr>
+            <tr><td>C/C++</td><td>10%</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- HTML Interview Questions -->
+      <div class="questions">
+        <h2>HTML Questions</h2>
+        <ol>
+          <li>What is the purpose of the <code>&lt;!DOCTYPE html&gt;</code> declaration?</li>
+          <li>Explain the difference between block-level and inline elements.</li>
+          <li>How do you add comments in HTML?</li>
+          <li>What are semantic elements? Give three examples.</li>
+          <li>How do you embed an accessible image in a page?</li>
+          <li>Describe the difference between <code>&lt;div&gt;</code> and <code>&lt;span&gt;</code>.</li>
+          <li>Why is <code>&lt;meta charset="UTF-8"&gt;</code> important?</li>
+          <li>How do you make a link open in a new browser tab?</li>
+          <li>What is the role of the <code>alt</code> attribute on images?</li>
+          <li>Compare ordered (<code>&lt;ol&gt;</code>) vs unordered (<code>&lt;ul&gt;</code>) lists.</li>
+          <li>What is the purpose of the <code>&lt;head&gt;</code> section in an HTML file?</li>
+          <li>How do you create a hyperlink in HTML? Provide an example.</li>
+          <li>Which HTML tag is used to insert an image into a web page?</li>
+          <li>What’s the difference between <code>&lt;div&gt;</code> and <code>&lt;span&gt;</code>?</li>
+          <li>How can you create an unordered list and an ordered list in HTML?</li>
+          <li>How do you open a link in a new tab using HTML?</li>
+          <li>How do you create a table in HTML? List the essential tags used.</li>
+          <li>What is the purpose of the <code>alt</code> attribute in an <code>&lt;img&gt;</code> tag?</li>
+          <li>How do you apply internal CSS styles to an HTML page?</li>
+        </ol>
+
+        <h2 style="margin-top: 40px;">CSS Questions</h2>
+        <ol>
+          <li>What is the purpose of the <code>&lt;!DOCTYPE html&gt;</code> declaration?</li>
+          <li>Explain the difference between block-level and inline elements.</li>
+          <li>How do you add comments in HTML?</li>
+          <li>What are semantic elements? Give three examples.</li>
+          <li>How do you embed an accessible image in a page?</li>
+          <li>Describe the difference between <code>&lt;div&gt;</code> and <code>&lt;span&gt;</code>.</li>
+          <li>Why is <code>&lt;meta charset="UTF-8"&gt;</code> important?</li>
+          <li>How do you make a link open in a new browser tab?</li>
+          <li>What is the role of the <code>alt</code> attribute on images?</li>
+          <li>Compare ordered (<code>&lt;ol&gt;</code>) vs unordered (<code>&lt;ul&gt;</code>) lists.</li>
+          <li>What does CSS stand for, and what is its main purpose in web design?</li>
+          <li>How do you apply CSS to an HTML element using an internal <code>&lt;style&gt;</code> tag?</li>
+          <li>What is the difference between inline, internal, and external CSS?</li>
+          <li>How do you change the background color of a webpage using CSS?</li>
+          <li>Which CSS property is used to change the font size of text?</li>
+          <li>What is the use of the margin and padding properties in CSS?</li>
+          <li>How do you add a border to an element in CSS?</li>
+          <li>Why do we use CSS in HTML?</li>
+        </ol>
+      </div>
+
+
+    </div>
+
+  </div>
+
+</body>
+</html>

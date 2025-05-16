@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Billing Invoice</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f7f7f7;
+      margin: 0;
+      padding: 0;
+    }
+
+    .header_container {
+      background-color: aqua;
+      border: 2px solid black;
+      padding: 10px 0;
+    }
+
+    .header {
+      color: black;
+      text-align: center;
+      font-size: 32px;
+    }
+
+    .main_bill {
+      border: 2px solid black;
+      margin: 20px;
+      background-color: white;
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    .delivery_info, .billing_info {
+      width: 47%;
+      display: inline-block;
+      vertical-align: top;
+      border: 2px solid black;
+      border-radius: 10px;
+      margin: 10px 1%;
+      padding: 20px;
+      box-sizing: border-box;
+      background-color: #ffffff;
+    }
+
+    #hrec, #hsend {
+      text-align: left;
+      font-size: larger;
+      text-decoration: underline;
+      margin-bottom: 0;
+    }
+
+    .receiver, .sender {
+      line-height: 28px;
+      font-size: 18px;
+      margin: 0;
+      padding-left: 20px;
+    }
+
+    .amount_section {
+      text-align: center;
+      margin-top: 20px;
+      font-size: 22px;
+      font-weight: bold;
+    }
+
+    .billing_info h2 {
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    .billing_info table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+    }
+
+    .billing_info th, .billing_info td {
+      border: 1px solid black;
+      padding: 6px;
+      text-align: center;
+    }
+
+    .billing_info th {
+      background-color: #d9f2f2;
+    }
+  </style>
+</head>
+<body>
+    <div class="header_container">
+        <h1 class="header">Billing Invoice</h1>
+    </div>
+
+    <div class="main_bill">
+
+        <!-- Delivery Info -->
+        <div class="delivery_info">
+        <h4 id="hrec">Bill To :</h4>
+        <p class="receiver" style="font-weight: 700;">Generic Company Inc.</p>
+        <p class="receiver">Random Address,</p>
+        <p class="receiver">Thane,</p>
+        <p class="receiver">Maharashtra.</p>
+
+        <h4 id="hsend">Sender :</h4>
+        <p class="sender" style="font-weight: 700;">Distributer Inc.</p>
+        <p class="sender">Random Address,</p>
+        <p class="sender">Ayodhya,</p>
+        <p class="sender">Uttar Pradesh</p>
+
+        <hr style="margin: 20px 0;">
+        <div class="amount_section">Amount: $42374</div>
+        </div>
+
+        <!-- Billing Info -->
+        <div class="billing_info">
+        <h2>Billing Details</h2>
+        <table>
+            <thead>
+            <tr>
+                <th>Product ID</th>
+                <th>Name</th>
+                <th>Qty</th>
+                <th>Price ($)</th>
+                <th>Total ($)</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>101</td>
+                <td>Monitor</td>
+                <td>2</td>
+                <td>200</td>
+                <td>400</td>
+            </tr>
+            <tr>
+                <td>102</td>
+                <td>Keyboard</td>
+                <td>5</td>
+                <td>40</td>
+                <td>200</td>
+            </tr>
+            <tr>
+                <td>103</td>
+                <td>Mouse</td>
+                <td>5</td>
+                <td>25</td>
+                <td>125</td>
+            </tr>
+            <tr>
+                <td>104</td>
+                <td>CPU</td>
+                <td>1</td>
+                <td>600</td>
+                <td>600</td>
+            </tr>
+            </tbody>
+        </table>
+        </div>
+    </div>
+</body>
+</html>

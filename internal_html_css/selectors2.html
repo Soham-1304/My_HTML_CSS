@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      div span {
+      color: purple;
+    }
+
+    /* Child selector: only direct <li> children of <ul> */
+    ul > li {
+      list-style-type: square;
+    }
+
+    /* Adjacent-sibling selector: <p> immediately after an <h2> */
+    h2 + p {
+      margin-top: 0;
+      font-style: italic;
+    }
+
+    /* General-sibling selector: any <p> after an <h2> (not necessarily immediate) */
+    h2 ~ p {
+      color: gray;
+    }
+    </style>
+</head>
+<body>
+    <div>
+        <span>Spann</span>
+      </div>
+    
+      <ul>
+        <li>First item</li>
+        <li>Second item</li>
+      </ul>
+    
+      <h2>Headding</h2>
+      <p>This paragraph is italic and margin-tight</p>
+      <p>This paragraph is also gray because it follows the heading</p>
+</body>
+</html>

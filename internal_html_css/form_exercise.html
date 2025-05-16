@@ -1,0 +1,89 @@
+<!-- Design a HTML form with a block pattern that includes text input for user's name, password, email, 
+        checkbox, radio button, drop-down and submit button -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <fieldset>
+            <legend>Personal Data</legend>
+            <label>Name :</label>
+            <input type="text" name="sname" placeholder="Your Name">
+            <br><br>
+
+            <label>Password :</label>
+            <input type="password" name="password" placeholder="Your Password">
+            <br><br>
+
+            <label>Email :</label>
+            <input type="email" name="semail" placeholder="Your Email">
+            <br><br>
+
+            <label>Phone Number :</label>
+            <input type="tel" name="phone" placeholder="Your Phone Number">
+            <br><br>
+
+            <label>Date of Birth :</label>
+            <input type="date" name="dob">
+            <br><br>
+
+            <label>Gender :</label>
+            <input type="radio" name="gender" value="male"><label>Male</label>
+            <input type="radio" name="gender" value="female"><label>Female</label>
+            <br><br>
+
+            <label>Address :</label>
+            <br>
+            <textarea name="address" rows="4" cols="40" placeholder="Your Address"></textarea>
+            <br><br>
+
+            <label>College :</label>
+            <input type="text" name="college" placeholder="Your College Name">
+            <br><br>
+
+            <label>Friends :</label>
+            <select>
+                <option value="">Rayan</option>
+                <option value="">Piyush</option>
+                <option value="">Siva</option>
+                <option value="">Bharath</option>
+                <option value="">Adarsh</option>
+                <option value="">Bankim</option>
+            </select>
+            <br><br>
+
+            <label>Courses :</label>
+            <select>
+                <option>--Computer Science--</option>
+                <optgroup label="3 Months Course">
+                <option>DBMS</option>
+                <option>HTML/CSS</option>
+                </optgroup>
+                <optgroup label="6 Months Course">
+                <option>JS</option>
+                <option>Java</option>
+                </optgroup>
+                <optgroup label="1 Year Course">
+                <option>DSA</option>
+                <option>Python</option>
+                </optgroup>
+            </select>
+            <br><br>
+
+            <label>Skills :</label>
+            <input type="checkbox" name="skills" value="python">Python
+            <input type="checkbox" name="skills" value="c_cpp">C/C++
+            <input type="checkbox" name="skills" value="html_css">HTML/CSS
+            <input type="checkbox" name="skills" value="dsa">DSA
+            <br><br>
+
+            <input type="submit" value="submit">
+        </fieldset>
+    </form>
+</body>
+</html>

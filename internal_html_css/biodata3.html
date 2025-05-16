@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Biodata Page</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%;
+      background-color: blanchedalmond;
+      font-family: 'Courier New', Courier, monospace;
+    }
+
+    .wrapper {
+      display: flex;
+      min-height: 100vh;
+    }
+
+    /* Left Sidebar */
+    .left-sidebar, .right-sidebar {
+      width: 20%;
+      padding: 30px 20px;
+      background-color: #ffe4c4;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+
+    .left-sidebar {
+      border-right: 2px solid chocolate;
+    }
+
+    .right-sidebar {
+      border-left: 2px solid chocolate;
+      background-color: #fff0e0;
+    }
+
+    /* Center Content */
+    .center-content {
+      width: 60%;
+      padding: 20px;
+    }
+
+    h1 {
+      font-style: italic;
+      color: brown;
+      font-size: 60px;
+      text-align: center;
+      display: inline-block;
+      vertical-align: top;
+      margin-left: 32%;
+      margin-right: 40px;
+    }
+
+    ol {
+      list-style-type: decimal;
+      list-style-position: inside;
+      color: brown;
+      margin-top: 5%;
+      width: 750px;
+      border: 2px solid darkred;
+      border-radius: 30px;
+      padding: 10px 20px;
+    }
+
+    ul {
+      list-style-type: disc;
+      color: chocolate;
+    }
+
+    li {
+      margin: 4px;
+      font-style: italic;
+    }
+
+    .outer {
+      font-size: 36px;
+      font-weight: bold;
+    }
+
+    .inner {
+      font-size: 24px;
+      font-weight: 600;
+    }
+
+    .photo {
+      font-size: 24px;
+    }
+
+    .mypic {
+      border: 2px solid chocolate;
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      object-position: center;
+      border-radius: 100%;
+      display: inline-block;
+      vertical-align: top;
+    }
+
+    .section-title {
+      font-size: 26px;
+      font-weight: bold;
+      margin-bottom: 15px;
+      color: darkred;
+    }
+
+    .link {
+      display: block;
+      margin-bottom: 12px;
+      color: brown;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .link:hover {
+      text-decoration: underline;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <!-- Left Sidebar -->
+    <div class="left-sidebar">
+      <div class="section-title">Contact Info</div>
+      <a href="https://github.com/yourusername" class="link" target="_blank">GitHub</a>
+      <a href="https://linkedin.com/in/yourusername" class="link" target="_blank">LinkedIn</a>
+      <a href="mailto:soham@example.com" class="link">Email Me</a>
+    </div>
+
+    <!-- Center Content -->
+    <div class="center-content">
+      <h1>Biodata</h1>
+      <img class="mypic" src="doge2.jpg" alt="doge2">
+      <ol>
+        <li class="outer">Personal Details
+          <ul>
+            <li class="inner">Name : Soham Karandikar</li>
+            <li class="inner">Age : 19</li>
+            <li class="inner">Address : Naman Ke Ghar</li>
+            <li class="photo"><a href="doge2.jpg" target="_blank">My_Picture</a></li>
+          </ul>
+        </li>
+        <li class="outer">Professional Details
+          <ul>
+            <li class="inner">Qualification : B.Tech CSE at ITM University</li>
+            <li class="inner">Skills : Python, Java, DSA, DBMS, C++</li>
+            <li class="inner">Objectives : Get a 51 LPA job</li>
+          </ul>
+        </li>
+        <li class="outer">Hobbies
+          <ul>
+            <li class="inner">Sleeping</li>
+            <li class="inner">Watching Anime</li>
+            <li class="inner">Coding</li>
+          </ul>
+        </li>
+      </ol>
+    </div>
+
+    <!-- Right Sidebar -->
+    <div class="right-sidebar">
+      <div class="section-title">Projects</div>
+      <ul>
+        <li class="inner">Library Management System</li>
+        <li class="inner">Edits Creator App (Reels/Shorts)</li>
+        <li class="inner">Tribute Page for Balasaheb Thackeray</li>
+      </ul>
+    </div>
+  </div>
+</body>
+</html>

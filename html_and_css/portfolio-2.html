@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Name – Portfolio</title>
+  <!-- Google Fonts: Poppins -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="portfolio.css">
+</head>
+<body class="light">
+  <header>
+    <nav class="container flex">
+      <div class="logo">Soham Karandikar</div>
+      <ul class="menu flex">
+        <li><a href="#about">About</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <section class="hero">
+      <img class="image" id="image"
+        src="soham.png"
+        alt="Your Photo"
+        style="
+          display: block;
+          width: 150px;
+          height: 150px;
+          margin: 0 auto 1rem;
+          border-radius: 50%;
+          object-fit: cover;
+          box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+        "
+      >
+    
+      <h1>Hello, I’m <span class="accent">Soham Karandikar</span></h1>
+      <p>Computer Science Student & Aspiring Developer</p>
+    </section>
+  </header>
+
+  <main class="container">
+    <section id="about" class="card">
+      <h2>About Me</h2>
+      <p>I’m a passionate Computer Science student at ITM Skills University, where I explore
+        web development, data structures, and machine learning. When I’m not coding,
+        you’ll find me reading tech blogs, contributing to open-source projects,
+        or experimenting with HTML/CSS. I love solving problems and
+        continually honing my skills to build elegant, user-friendly experiences.</p>
+    </section>
+
+    <section id="education" class="card">
+      <h2>Education</h2>
+      <ul>
+        <li><strong>B.Tech in Computer Science</strong>, College Name (2024–Present)</li>
+        <li><strong>High School</strong>Studybuzz (2022–2024)</li>
+      </ul>
+    </section>
+
+    <section id="skills" class="card">
+      <h2>Skills</h2>
+      <div class="flex skills">
+        <div class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5"><span>HTML5</span></div>
+        <div class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3"><span>CSS3</span></div>
+        <div class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java"><span>Java</span></div>
+        <div class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python"><span>Python</span></div>
+        <div class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL"><span>MySQL</span></div>
+      </div>
+    </section>
+
+    <section id="projects" class="card">
+      <h2>Projects</h2>
+      <div class="flex project-list">
+        <article class="project">
+          <h3>Instagram Metrics Analyser</h3>
+          <p>A web app using HTML/CSS, JS, Python to fetch data from Instagram and perform statistics to give refined user statistics</p>
+        </article>
+        <article class="project">
+          <h3>Medical Risk Analyser</h3>
+          <p>A static site that uses HTML/CSS and Backend with ML model to accurately predict the risk of a medical failure</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact" class="card social-contact">
+      <h2>Contact</h2>
+      <div class="flex socials">
+        <a href="https://github.com/yourusername" target="_blank">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub Logo">
+          GitHub
+        </a>
+        <a href="https://linkedin.com/in/yourprofile" target="_blank">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" alt="LinkedIn Logo">
+          LinkedIn
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="container">
+    <p>© 2025 Your Name • Designed with ❤️</p>
+  </footer>
+  <script>
+    const image = document.getElementById("image");
+  
+    image.addEventListener("click", () => {
+      console.log("hello");
+      
+      document.body.classList.toggle("light");
+    });
+  </script>  
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: blanchedalmond;
+        }
+        h1{
+            font-family: 'Courier New', Courier, monospace;
+            font-style: italic;
+            color: brown;
+            font-size: 60px;
+            text-align: center;
+            display: inline-block;
+            vertical-align: top;
+            margin-left: 32%;
+            margin-right: 40px;
+        }
+        ol{
+            list-style-type: decimal;
+            list-style-position: inside;
+            color: brown;
+            margin-left: 22%;
+            margin-top: 5%;
+            width: 750px;
+            border: 2px solid darkred;
+            border-radius: 30px;
+            padding-top: 8px;
+        }
+        ul{
+            list-style-type: disc;
+            color: chocolate;
+        }
+        li{
+            margin: 4px;
+            font-family:'Courier New', Courier, monospace;
+            font-style: italic;
+        }
+        .outer{
+            font-size: 36px;
+            font-weight: bold;
+        }
+        .inner{
+            font-size: 24px;
+            font-weight: 600;
+        }
+        .photo{
+            font-size: 24px;
+        }
+        .mypic{
+            border: 2px solid chocolate;
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            object-position: center;
+            border-radius: 100%;
+            display: inline-block;
+            vertical-align: top;
+        }
+    </style>
+</head>
+<body>
+    <h1>Biodata</h1>
+    <img class="mypic" src="doge2.jpg" alt="doge2">
+    <ol>
+        <li class="outer">Personal Details
+            <ul>
+                <li class="inner">Name : Soham Karandikar</li>
+                <li class="inner">Age : 19</li>
+                <li class="inner">Address : Naman Ke Ghar</li>
+                <li class="photo"><a href="doge2.jpg" target="_blank">My_Picture</a></li>
+            </ul>
+        </li>
+        <li class="outer">Professional Details
+            <ul>
+                <li class="inner">Qualification : B.Tech CSE at ITM University</li>
+                <li class="inner">Skills : Python, Java, DSA, DBMS, C++</li>
+                <li class="inner">Objectives : Get a 51 LPA job</li>
+            </ul>
+        </li>
+        <li class="outer">Hobbies
+            <ul>
+                <li class="inner">Sleeping</li>
+                <li class="inner">Watching Anime</li>
+                <li class="inner">Coding</li>
+            </ul>
+        </li>
+    </ol>
+</body>
+</html>

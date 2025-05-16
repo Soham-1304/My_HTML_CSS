@@ -1,0 +1,399 @@
+/*--------------------------------------------------------------------
+    1. GLOBAL RESET & BASE
+    --------------------------------------------------------------------*/
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body {
+        font-family: 'Segoe UI', sans-serif;
+        color: #333;
+        background: linear-gradient(135deg, #e0c3fc 0%, #8ec5fc 100%);
+        min-height: 100vh;
+        overflow-x: hidden;
+        line-height: 1.5;
+    }
+    
+    /*--------------------------------------------------------------------
+        2. NAVBAR (Responsive + Hamburger)
+    --------------------------------------------------------------------*/
+    .navbar {
+        position: fixed; /* Changed from fixed to relative */
+        top: 0;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.6);
+        backdrop-filter: blur(10px);
+        z-index: 100;
+    }
+    .navbar__inner {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1rem;
+    }
+    .logo img {
+        height: 40px;
+    }
+    .nav-links {
+        list-style: none;
+        display: flex;
+        gap: 1rem;
+    }
+    .nav-links li {}
+    .nav-links a {
+        color: #fff;
+        text-decoration: none;
+        font-weight: 500;
+        transition: opacity 0.2s;
+    }
+    .nav-links a:hover {
+        opacity: 0.7;
+    }
+    .auth-buttons a {
+        margin-left: 0.5rem;
+        color: #fff;
+        text-decoration: none;
+        padding: 0.5rem 1rem;
+        border: 1px solid #fff;
+        border-radius: 5px;
+        transition: background 0.2s, color 0.2s;
+    }
+    .auth-buttons a:hover {
+        background: rgba(255, 255, 255, 0.2);
+    }
+    .icon {
+        display: none;
+        color: #fff;
+        font-size: 1.5rem;
+        cursor: pointer;
+    }
+    
+    /*--------------------------------------------------------------------
+        3. HERO SECTION
+    --------------------------------------------------------------------*/
+    .hero {
+        position: relative;
+        height: 100vh; /* Full viewport height */
+        overflow: hidden;
+    }
+    .hero-video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: -1; /* Place the video behind the content */
+    }
+    .hero-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5); /* Add a dark overlay for better text visibility */
+        z-index: 1;
+    }
+    .hero-content {
+        position: relative;
+        z-index: 2; /* Ensure content is above the video and overlay */
+        text-align: center;
+        color: white;
+        padding: 20px;
+        padding-top: 200px;
+    }
+    .hero-content h1 {
+        font-size: clamp(2.5rem, 8vw, 4rem);
+        margin-bottom: 1rem;
+    }
+    .hero-content p {
+        font-size: clamp(1rem, 2.5vw, 1.5rem);
+        margin-bottom: 2rem;
+    }
+    .btn-primary {
+        background: #ff7f50;
+        color: #fff;
+        padding: 0.75rem 1.5rem;
+        border-radius: 5px;
+        text-decoration: none;
+        font-weight: 600;
+        transition: background 0.3s;
+    }
+    .btn-primary:hover {
+        background: #e76b3c;
+    }
+    
+    /*--------------------------------------------------------------------
+        4. GRADIENT ACCENT
+    --------------------------------------------------------------------*/
+    .page-gradient {
+        height: 8px;
+        background: linear-gradient(90deg, #ff9a9e, #fad0c4, #fad0c4);
+    }
+    
+    /*--------------------------------------------------------------------
+        5. FEATURES (Pop-Up Cards)
+    --------------------------------------------------------------------*/
+    .features {
+        position: relative;
+        padding: 50px 20px;
+        background-color: #f9f9f9; /* Add a background color to distinguish it from the hero section */
+        z-index: 0;
+        margin-top: 0; /* Ensure no overlap */
+    }
+    .features-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 2rem;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    .feature-card {
+        position: relative;
+        background: #fff;
+        padding: 1.5rem;
+        border-radius: 15px;
+        text-align: center;
+        cursor: pointer;
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+        transition: transform 0.2s;
+    }
+    .feature-card:hover {
+        transform: translateY(-5px) scale(1.02);
+    }
+    .feature-card img {
+        width: 80px;
+        height: 80px;
+        object-fit: contain;
+        margin-bottom: 1rem;
+        border-radius: 50%;
+    }
+    .feature-card p {
+        margin-top: 0.5rem;
+        color: #555;
+    }
+    /* Popup overlay */
+    .popup {
+        position: absolute;
+        inset: 0;
+        background: rgba(255, 255, 255, 0.97);
+        padding: 1.5rem;
+        display: none;
+        flex-direction: column;
+        justify-content: center;
+        border-radius: 15px;
+        text-align: left;
+    }
+    .feature-card:hover .popup,
+    .feature-card:focus-within .popup {
+        display: flex;
+    }
+    .popup h4 {
+        margin-bottom: 0.5rem;
+        color: #333;
+    }
+    .popup ul {
+        list-style: disc inside;
+        color: #555;
+    }
+    
+    /*--------------------------------------------------------------------
+        6. CALL-OUT CTA
+    --------------------------------------------------------------------*/
+    .callout {
+        padding: 4rem 1rem;
+        text-align: center;
+        background: linear-gradient(135deg, #f6d365, #fda085);
+        color: #1f2937;
+    }
+    .callout h2 {
+        font-size: 2.5rem;
+        margin-bottom: 0.5rem;
+    }
+    .callout p {
+        font-size: 1.1rem;
+        margin-bottom: 1.5rem;
+    }
+    .callout-buttons {
+        display: flex;
+        gap: 1rem;
+        justify-content: center;
+    }
+    .callout-buttons .btn-outline {
+        border: 2px solid #1f2937;
+        color: #1f2937;
+        padding: 0.75rem 1.5rem;
+        border-radius: 5px;
+        background: transparent;
+        transition: all 0.3s;
+    }
+    .callout-buttons .btn-outline:hover {
+        background: #1f2937;
+        color: #fff;
+    }
+    .callout-buttons .btn-primary {
+        background: #1f2937;
+        color: #fff;
+    }
+    .callout-buttons .btn-primary:hover {
+        background: #111827;
+    }
+    
+    /*--------------------------------------------------------------------
+        7. SPECS (Flip Cards)
+    --------------------------------------------------------------------*/
+    .specs {
+        padding: 4rem 1rem;
+        background: #e5e7eb;
+    }
+    .specs-grid {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 2rem;
+    }
+    .flip-card {
+        width: 260px;
+        height: 170px;
+        perspective: 1000px;
+    }
+    .flip-inner {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        transition: transform 0.6s;
+        transform-style: preserve-3d;
+    }
+    .flip-card:hover .flip-inner {
+        transform: rotateY(180deg);
+    }
+    .flip-front,
+    .flip-back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+        border-radius: 15px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    }
+    .flip-front {
+        background: #fff;
+        color: #2d3436;
+    }
+    .flip-back {
+        background: #2d3436;
+        color: #fff;
+        transform: rotateY(180deg);
+    }
+    
+    /*--------------------------------------------------------------------
+        8. TESTIMONIALS
+    --------------------------------------------------------------------*/
+    .testimonials {
+        padding: 4rem 1rem;
+        background: #fff;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 2rem;
+    }
+    .testimonial {
+        width: 320px;
+        background: #dfe6e9;
+        padding: 2rem;
+        border-radius: 15px;
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    }
+    .testimonial blockquote {
+        font-style: italic;
+        margin-bottom: 1rem;
+        color: #2d3436;
+    }
+    .testimonial cite {
+        display: block;
+        text-align: right;
+        font-weight: 600;
+    }
+    
+    /*--------------------------------------------------------------------
+        9. FOOTER
+    --------------------------------------------------------------------*/
+    .footer {
+        background: #1f2937;
+        color: #fff;
+        padding: 3rem 1rem;
+        text-align: center;
+    }
+    .footer-widgets {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 3rem;
+        margin-bottom: 2rem;
+    }
+    .footer-widgets div {
+        min-width: 160px;
+    }
+    .footer-widgets h4 {
+        margin-bottom: 1rem;
+        font-size: 1.1rem;
+        color: #f9fafb;
+    }
+    .footer-widgets img {
+        width: 40px;
+        margin-right: 0.5rem;
+    }
+    .footer-links {
+        list-style: none;
+        padding-left: 0;
+    }
+    .footer-links li {
+        margin-bottom: 0.5rem;
+    }
+    .footer-links a {
+        color: #9ca3af;
+        text-decoration: none;
+    }
+    .footer-links a:hover {
+        color: #fff;
+    }
+    .social {
+        filter: invert(1) brightness(1.2);
+        width: 30px;
+        margin-right: 0.5rem;
+    }
+    
+    /*--------------------------------------------------------------------
+        10. RESPONSIVE MEDIA QUERIES
+    --------------------------------------------------------------------*/
+    @media (max-width: 768px) {
+        .nav-links,
+        .auth-buttons {
+        display: none;
+        }
+        .icon {
+        display: block;
+        }
+        .features-grid {
+        grid-template-columns: 1fr;
+        }
+        .specs-grid {
+        flex-direction: column;
+        }
+        .testimonial {
+        width: 100%;
+        }
+        .hero-content h1 {
+        font-size: 2.5rem;
+        }
+        .hero-content p {
+        font-size: 1rem;
+        }
+    }

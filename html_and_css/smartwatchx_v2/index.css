@@ -1,0 +1,213 @@
+    /*--------------------------------------------------------------------
+    GLOBAL
+    --------------------------------------------------------------------*/
+    * {
+        margin: 0; padding: 0; box-sizing: border-box;
+    }
+    body {
+        font-family: 'Segoe UI', sans-serif;
+        color: #333;
+        background: #f0f4f8;
+        line-height: 1.5;
+    }
+    h2 {
+        text-align: center;
+        margin: 2rem 0 1rem;
+        font-size: 2rem;
+        color: #1f2937;
+    }
+    
+    /*--------------------------------------------------------------------
+        HERO
+    --------------------------------------------------------------------*/
+    .hero {
+        position: relative; height: 100vh; overflow: hidden;
+    }
+    .hero-video {
+        position: absolute; top: 50%; left: 50%;
+        min-width: 100%; min-height: 100%;
+        transform: translate(-50%, -50%);
+        object-fit: cover; z-index: 1;
+    }
+    .hero-overlay {
+        position: absolute; inset: 0;
+        background: rgba(0, 0, 0, 0.4); z-index: 2;
+    }
+    .hero-content {
+        position: relative; z-index: 3;
+        text-align: center; top: 50%;
+        transform: translateY(-50%);
+        color: #fff; padding: 0 1rem;
+    }
+    .hero-content h1 { font-size: 3rem; margin-bottom: 0.5rem; }
+    .hero-content p  { font-size: 1.2rem; margin-bottom: 1.5rem; }
+    .btn {
+        background: #ff7f50; color: #fff;
+        padding: 0.75rem 1.5rem; border-radius: 5px;
+        text-decoration: none; font-weight: 600;
+        transition: background 0.3s;
+    }
+    .btn:hover { background: #e76b3c; }
+    
+    /*--------------------------------------------------------------------
+        NAVBAR
+    --------------------------------------------------------------------*/
+    .navbar {
+        position: absolute; top: 0; width: 100%;
+        display: flex; justify-content: space-between;
+        padding: 1rem 2rem; z-index: 4;
+    }
+    .logo { color: #fff; font-size: 1.5rem; font-weight: 700; }
+    .nav-links { list-style: none; display: flex; }
+    .nav-links li { margin-left: 1.5rem; }
+    .nav-links a {
+        color: #fff; text-decoration: none;
+        font-weight: 500; transition: opacity 0.2s;
+    }
+    .nav-links a:hover { opacity: 0.7; }
+    
+    /*--------------------------------------------------------------------
+        FEATURES (Pop-Up Cards via :has())
+    --------------------------------------------------------------------*/
+    .features {
+        padding: 3rem 1rem; background: #fff;
+    }
+    .features-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 2rem; max-width: 1200px; margin: 0 auto;
+    }
+    .feature-card {
+        position: relative; background: #f9fafb;
+        padding: 1.5rem; border-radius: 10px;
+        text-align: center; cursor: pointer;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        transition: transform 0.2s;
+    }
+    .feature-card:hover { transform: translateY(-5px); }
+    .feature-card img {
+        width: 80px; height: 80px; object-fit: contain;
+        margin-bottom: 1rem;
+    }
+    .feature-card p {
+        margin-top: 0.5rem; color: #6b7280;
+    }
+    
+    /* Popup info */
+    .feature-card:has(.popup:visible),
+    .feature-card:focus-within {
+        transform: translateY(-5px);
+    }
+    .popup {
+        position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+        background: rgba(255,255,255,0.97); padding: 1.5rem;
+        display: none; flex-direction: column; justify-content: center;
+        border-radius: 10px; text-align: left;
+    }
+    .feature-card:focus-within .popup,
+    .feature-card:hover .popup {
+        display: flex;
+    }
+    .popup h4 {
+        margin-bottom: 0.5rem; color: #111827;
+    }
+    .popup ul {
+        list-style: disc inside; color: #374151;
+    }
+    
+    /*--------------------------------------------------------------------
+        SPECS (Flip Cards)
+    --------------------------------------------------------------------*/
+    .specs {
+        padding: 3rem 1rem; background: #e5e7eb;
+    }
+    .specs-grid {
+        display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem;
+    }
+    .flip-card {
+        background: transparent; width: 260px; height: 160px;
+        perspective: 1000px;
+    }
+    .flip-inner {
+        position: relative; width: 100%; height: 100%;
+        transition: transform 0.6s; transform-style: preserve-3d;
+    }
+    .flip-card:hover .flip-inner {
+        transform: rotateY(180deg);
+    }
+    .flip-front, .flip-back {
+        position: absolute; width: 100%; height: 100%;
+        backface-visibility: hidden; border-radius: 10px;
+        display: flex; flex-direction: column;
+        justify-content: center; align-items: center;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    .flip-front {
+        background: #fff; color: #111827;
+    }
+    .flip-back {
+        background: #1f2937; color: #f9fafb;
+        transform: rotateY(180deg);
+    }
+    .flip-front h3 {
+        margin-bottom: 0.5rem;
+    }
+    
+    /*--------------------------------------------------------------------
+        TESTIMONIALS
+    --------------------------------------------------------------------*/
+    .testimonials {
+        padding: 3rem 1rem; background: #fff;
+        display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem;
+    }
+    .testimonial {
+        width: 320px; background: #f4f4f5; padding: 2rem;
+        border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    }
+    .testimonial blockquote {
+        font-style: italic; margin-bottom: 1rem; color: #374151;
+    }
+    .testimonial cite {
+        display: block; text-align: right; font-weight: 600;
+    }
+    
+    /*--------------------------------------------------------------------
+        FOOTER
+    --------------------------------------------------------------------*/
+    .footer {
+        background: #1f2937; color: #fff; padding: 2rem 1rem;
+        text-align: center;
+    }
+    .footer-widgets {
+        display: flex; flex-wrap: wrap; justify-content: center;
+        gap: 3rem; margin-bottom: 2rem;
+    }
+    .footer-widgets div {
+        min-width: 160px;
+    }
+    .footer-widgets h4 {
+        margin-bottom: 1rem; font-size: 1.1rem; color: #f9fafb;
+    }
+    .footer-widgets a img {
+        width: 40px; margin-right: 0.5rem; vertical-align: middle;
+    }
+    .footer-links {
+        list-style: none; text-align: left; padding-left: 0;
+    }
+    .footer-links li {
+        margin-bottom: 0.5rem;
+    }
+    .footer-links a {
+        color: #9ca3af; text-decoration: none;
+    }
+    .footer-links a:hover {
+        color: #fff;
+    }
+    .social {
+        filter: invert(1) brightness(1.2);
+        width: 30px; margin-right: 0.5rem;
+    }
+    copyright {
+        font-size: 0.9rem; color: #9ca3af;
+    }
+    

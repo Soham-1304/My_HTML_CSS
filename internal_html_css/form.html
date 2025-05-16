@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Demo</title>
+    <style>
+        select{
+            background-color:white;
+            color:orange;
+        }
+    </style>
+</head>
+<body>
+    <form action="">
+        <fieldset>
+            <legend>Personal Data</legend>
+            <label >Name :</label>
+            <input type="text" name="sname" placeholder="Your Name">
+            <br><br>
+
+            <label >Father Name :</label>
+            <input type="text" name="fname" placeholder="Father's Name">
+            <br><br>
+
+            <label >Gender :</label>
+            <input type="radio" name="gender"><label>Male</label>
+            <input type="radio" name="gender"><label>Female</label>
+            <br><br>
+
+            <label>Email :</label>
+            <input type="email" name="semail" placeholder="Your Email">
+            <br><br>
+
+            <label>Friends :</label>
+            <select>
+                <option value="">Rayan</option>
+                <option value="">Piyush</option>
+                <option value="">Siva</option>
+                <option value="">Bharath</option>
+                <option value="">Adarsh</option>
+                <option value="">Rayan</option>
+            </select>
+            <br><br>
+
+            <label>Courses :</label>
+            <select>
+                <option>--Computer Science--</option>
+                <optgroup label="3 Months Course">
+                    <option>DBMS</option>
+                    <option>HTML/CSS</option>
+                </optgroup>
+                <optgroup label="6 Months Course">
+                    <option>JS</option>
+                    <option>Java</option>
+                </optgroup>
+                <optgroup label="1 Year Course">
+                    <option>DSA</option>
+                    <option>Python</option>
+                </optgroup>
+            </select>
+            <br><br>
+
+            <label>Skills :</label>
+            <input type="checkbox">Python
+            <input type="checkbox">C/C++
+            <input type="checkbox">HTML/CSS
+            <input type="checkbox">DSA
+            <br><br>
+
+            <input type="submit"> 
+
+        </fieldset>
+    </form>
+</body>
+</html>

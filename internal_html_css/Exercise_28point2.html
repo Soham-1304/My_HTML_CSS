@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .image{
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            object-position: center;
+            border-radius: 100%;
+            border: 2px solid orange;
+        }
+        #footerr{
+            margin-top: 1000px;
+            margin-left: 540px;
+        }
+        .Chapters{
+            list-style-position: inside;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        p{
+            margin: 0;
+            margin-top: 4px;
+            color: black;
+        }
+        li{
+            margin-top: 20px;
+            color: orange;
+        }
+        div{
+            margin-top: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1 id="head1">Question 1 - Round the image</h1>
+        <img class="image" src="doge2.jpg" alt="hehe">
+    </div>
+
+    <div>
+        <h1 id="head2">Question 2 - Link That Jumps To Bottom</h1>
+        <a href="#footerr">Jump To End</a>
+    </div>
+
+    <div>
+        <h1 id="head3">Question 3 - Table Of Content</h1>
+        <p><a href="#C4">Chapter 4</a></p>
+        <p><a href="#C10">Chapter 10</a></p>
+        <p><a href="#paraid">Read It Now !</a></p>
+
+        <ol class="Chapters">
+            <li>Chapter 1
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolor fuga commodi expedita voluptas error quasi alias ipsa minima rem amet fugiat laboriosam autem, repellat sint est sit quae iusto vel?</p>
+            </li>
+
+            <li>Chapter 2
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolor fuga commodi expedita voluptas error quasi alias ipsa minima rem amet fugiat laboriosam autem, repellat sint est sit quae iusto vel?</p>
+            </li>
+            <li>Chapter 3
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolor fuga commodi expedita voluptas error quasi alias ipsa minima rem amet fugiat laboriosam autem, repellat sint est sit quae iusto vel?</p>
+            </li>
+            <li id="C4">Chapter 4
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolor fuga commodi expedita voluptas error quasi alias ipsa minima rem amet fugiat laboriosam autem, repellat sint est sit quae iusto vel?</p>
+            </li>
+            <li>Chapter 5
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolor fuga commodi expedita voluptas error quasi alias ipsa minima rem amet fugiat laboriosam autem, repellat sint est sit quae iusto vel?</p>
+            </li>
+            <li>Chapter 6
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolor fuga commodi expedita voluptas error quasi alias ipsa minima rem amet fugiat laboriosam autem, repellat sint est sit quae iusto vel?</p>
+            </li>
+            <li>Chapter 7
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolor fuga commodi expedita voluptas error quasi alias ipsa minima rem amet fugiat laboriosam autem, repellat sint est sit quae iusto vel?</p>
+            </li>
+            <li>Chapter 8
+                <p id="paraid">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolor fuga commodi expedita voluptas error quasi alias ipsa minima rem amet fugiat laboriosam autem, repellat sint est sit quae iusto vel?</p>
+            </li>
+            <li>Chapter 9
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolor fuga commodi expedita voluptas error quasi alias ipsa minima rem amet fugiat laboriosam autem, repellat sint est sit quae iusto vel?</p>
+            </li>
+            <li id="C10">Chapter 10
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolor fuga commodi expedita voluptas error quasi alias ipsa minima rem amet fugiat laboriosam autem, repellat sint est sit quae iusto vel?</p>
+            </li>
+        </ol>
+    </div>
+
+    <div>
+        <h1 id="head4">Question 4 - Webpage & Bookmarks</h1>
+        <p><a href="#head1">Question1</a></p>
+        <p><a href="#head2">Question2</a></p>
+        <p><a href="#head3">Question3</a></p>
+        <p><a href="#head4">Question4</a></p>
+    </div>
+
+
+    <footer id="footerr">End</footer>
+</body>
+</html>
